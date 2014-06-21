@@ -6,15 +6,25 @@ run_analysis.R
 
 The file run_Analysis.R performs the following analysis on the UCI HAR Dataset:
     *Merges the training and test data sets to create one data set by using: 
-            -rbind to merge the subject_test.txt and subject_train.txt, the y_test.txt and y_train.txt , and the X_test.txt and X_train.txt data.  
-            -cbind to combine the subject, y, and X data into a single data set. 
+     **rbind to merge the subject_test.txt and subject_train.txt, the y_test.txt and y_train.txt , and the X_test.txt and X_train.txt data.  
+     **cbind to combine the subject, y, and X data into a single data set. 
 
-     *Appropriately labels the merged UCI HAR Dataset with the descriptive variable names.  This is done by setting the column names for the subject column to "subject", the y column to "ActivityByNum", and then the X data with the names from the features.txt file after they have been cleaned to remove the following characters  "()"   ","  "-"  and replacing the text "BodyBody" with "Body". 
+     *Appropriately labels the merged UCI HAR Dataset with the descriptive variable names.  
+      This is done by setting the column names for the subject column to "subject", 
+      the y column to "ActivityByNum", and then the X data with the names from the 
+      features.txt file after they have been cleaned to remove the following 
+      characters  "()"   ","  "-"  and replacing the text "BodyBody" with "Body". 
 
-     * Extracts only the measurements on the mean and standard deviation for each measurement from the UCI HAR Dataset by building a logical vector where those names that contain the substring "std" or "mean" have a setting of TRUE and those that don't have a setting of FALSE.  The logical vector is then used to subset the data set to extract only the measurements on the mean and standard deviation.   
-     * Replaces the activity identifiers (1-6) with the descriptive activity names  provided in the activity_labels.txt file (WALKING - LAYING). 
+     * Extracts only the measurements on the mean and standard deviation for each measurement 
+       from the UCI HAR Dataset by building a logical vector where those names that contain the 
+       substring "std" or "mean" have a setting of TRUE and those that don't have a setting of FALSE.  
+       The logical vector is then used to subset the data set to extract only the measurements on the mean and standard deviation.   
+
+     * Replaces the activity identifiers (1-6) with the descriptive activity names 
+        provided in the activity_labels.txt file (WALKING - LAYING). 
  
-     * Creates a second, independant tidy data set with the average of each variable for each activity and each subject, and writes the tidy data set to a text file "tidydata.txt".
+     * Creates a second, independant tidy data set with the average of each variable 
+       for each activity and each subject, and writes the tidy data set to a text file "tidydata.txt".
 
 
 DataDictionary
@@ -24,7 +34,10 @@ DataDictionary
     ActivityName - The name of the Activity - Walking, Walking_UpStairs, Walking_Downstairs, Sitting, Standing, Laying
 
 
-Note:  The following data is computed from the UCI HAR Dataset by computing the average for each variables mean and standard deviation, for each activity for each subject from the UCI HAR Dataset. The UCI HAR Dataset features_info.txt file provides a description of this data was obtained from the Samsung phones accelerometer and gyroscope.
+Note:  The following data is computed from the UCI HAR Dataset by computing the average for each 
+       variables mean and standard deviation, for each activity for each subject from the UCI HAR Dataset. 
+       The UCI HAR Dataset features_info.txt file provides a description of this data was obtained from 
+       the Samsung phones accelerometer and gyroscope.
 
 
    tBodyAccmeanXAVG - time domain, average mean Body Accelerometer X-axis
