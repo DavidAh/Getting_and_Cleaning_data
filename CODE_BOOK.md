@@ -1,5 +1,7 @@
-Code_Book.md Getting and Cleaning Data Course Project
-======================================================
+Code_Book.md 
+==================
+
+Getting and Cleaning Data Course Project
 
 run_analysis.R
 -------------------
