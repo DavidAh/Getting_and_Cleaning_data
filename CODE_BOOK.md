@@ -7,8 +7,11 @@ run_analysis.R
 -------------------
 
 The file run_Analysis.R performs the following analysis on the UCI HAR Dataset:
+
     * Merges the training and test data sets to create one data set by using: 
+
      * *rbind to merge the subject_test.txt and subject_train.txt, the y_test.txt and y_train.txt , and the X_test.txt and X_train.txt data.  
+
      * *cbind to combine the subject, y, and X data into a single data set. 
 
      *Appropriately labels the merged UCI HAR Dataset with the descriptive variable names.  
